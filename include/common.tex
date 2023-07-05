@@ -1,0 +1,35 @@
+\documentclass[aspectratio=169,hyperref={pdfpagelabels=false,colorlinks=true,linkcolor=white,urlcolor=gtgold},t]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% packages
+\usepackage{pict2e}
+\usepackage{epic}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{units}
+\usepackage{fancybox}
+\usepackage[absolute,overlay]{textpos} 
+%\usepackage{media9} % avi2flv: "C:\Program Files\ffmpeg\bin\ffmpeg.exe" -i TuneFreqFilterbank.avi -b 600k -s 441x324 -r 15 -acodec copy TuneFreqFilterbank.flv
+\usepackage{animate}
+\usepackage{gensymb}
+\usepackage{multirow}
+\usepackage{silence}
+\usepackage{tikz}
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\AtEveryCitekey{\iffootnote{\tiny}{}}
+\addbibresource{include/references}
+
+
+
+% fontsize
+\let\Tiny=\tiny
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% warnings
+\pdfsuppresswarningpagegroup=1
+\WarningFilter{biblatex}{Patching footnotes failed}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Some font shapes}
+\WarningFilter{gensymb}{Not defining}
+

@@ -51,7 +51,7 @@
     \begin{itemize}
         \item Baseline AST:
             \begin{itemize}
-                \item   state of the art performance on audio event classification\footfullcite{gong_ast_2021}
+                \item   good performance on audio event classification\footfullcite{gong_ast_2021}
             \end{itemize}
         \bigskip
         \item   ablation study:
@@ -65,8 +65,9 @@
 \end{frame}
 
 \begin{frame}{reprogramming}{results: classification metrics}
+		\vspace{-5mm}
     \begin{columns}
-    \column{.7\linewidth}    
+    \column{.65\linewidth}    
     \begin{footnotesize}
     \begin{table}[]
         \centering
@@ -82,12 +83,14 @@
         \end{tabular}
     \end{table}
     \end{footnotesize}
-    \column{.3\linewidth}
+    \column{.35\linewidth}
     \begin{figure}%
-    \includegraphics[width=\columnwidth]{reprog-results}%
+    \includegraphics[width=1.1\columnwidth]{reprog-results}%
     \end{figure}
     \end{columns}
-    
+		
+    \bigskip
+    \bigskip
     \begin{itemize}
         \item   a powerful model trained on a different task cannot easily be used directly
         \item   proper input and output processing can significantly improve performance

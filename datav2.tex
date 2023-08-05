@@ -3,7 +3,7 @@
 		\visible<2->{
 		\bigskip
 		\question{is the amount of data really the main issue}}
-		
+		\pause
 		\begin{itemize}
 				\item	maybe not...
 				\begin{itemize}
@@ -13,45 +13,98 @@
 \end{frame}
 
 \begin{frame}{data challenge revisited}{dataset example 1: chord detection}
-				\begin{itemize}
-						\item	Beatles dataset for chord detection
-								\begin{itemize}
-										\item contains all Beatles albums
-										\item	chord vocabulary
-										\item	problem stylistic homogeneity (timbre, harmony progressions, release times, ...)
-										\item problem imbalance (get numbers), leads to only the top classes being classified, potential key dependence
-								\end{itemize}
-				\end{itemize}
-				%\item	source separation: MUSDB
-					%\begin{itemize}
-						%\item choice of classes
-					%\end{itemize}
-				%\end{itemize}
-				%\item homogeneity questions representativeness of data
-				%\item	category restrictions question generalization to task
-				%\item problem for methodology: 
-				%\item	problem for training: 
-				%\item	problem for testing: 
+    \vspace{-5mm}
+    \begin{columns}
+    \column{.8\linewidth}
+        \begin{itemize}
+            \item	Beatles dataset for chord detection
+                \begin{itemize}
+                    \item   chord progressions from Beatles albums (181 songs)
+                    \item	chord vocabulary
+                \end{itemize}
+        \bigskip
+        \item<2->	potential problems
+            \begin{itemize}
+                \item   stylistic homogeneity
+                    \begin{itemize}
+                        \item timbre and instrumentation, style, release dates, audio quality...
+                    \end{itemize}
+                \item	chord imbalance
+                    \begin{itemize}
+                        \item very skewed distribution, key dependence
+                    \end{itemize}
+            \end{itemize}
+        \bigskip
+        \item<3->[$\Rightarrow$] \textbf{may not generalize}
+        \item<3->[$\Rightarrow$] \textbf{may only recognize most common chords}
+        \end{itemize}
+    \column{.2\linewidth}
+        \begin{figure}%
+            \includegraphics[width=\columnwidth]{beatles-chord-dist}%
+        \end{figure}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{data challenge revisited}{dataset example 2: music genre classification}
-		\begin{itemize}
-			\item	GTZAN dataset for genre classification
-					\begin{itemize}
-							\item 10 classes - what are the most important music genres
-							\item	problem labels don't match 'real' task (categories and single label classification)
-					\end{itemize}
-		\end{itemize}
+    \vspace{-5mm}
+    \begin{columns}
+    \column{.8\linewidth}
+    \begin{itemize}
+        \item	GTZAN dataset for genre classification
+            \begin{itemize}
+                \item   10 classes
+                \item   1000 \unit[30]{s} snippets
+            \end{itemize}
+        \bigskip
+        \item<2->	problems with labeling
+            \begin{itemize}
+                \item   what are the 10 most relevant music genres, why 10?
+                \item	how are genres categorized? examples:
+                    \begin{itemize}
+                        \item baroque, christmas songs, fugue, indian art music, symphony, fusion
+                    \end{itemize}
+                \item  single-label vs.\ multi-label
+            \end{itemize}
+        \bigskip
+        \item<3->[$\Rightarrow$] \textbf{mismatch between dataset labels and 'real' task}
+    \end{itemize}
+    \column{.2\linewidth}
+    \begin{itemize}
+        \item[] \textit{Disco}
+		\item[] \textit{Country}
+		\item[] \textit{Hip Hop}
+		\item[] \textit{Rock}
+        \item[] \textit{Blues}
+        \item[] \textit{Reggae}
+        \item[] \textit{Pop}
+        \item[] \textit{Metal}
+        \item[] \textit{Classical}
+        \item[] \textit{Jazz}
+    \end{itemize}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{data challenge revisited}{dataset example 3: source separation}
-		\begin{itemize}
-			\item	MUSDB dataset for source separation
-					\begin{itemize}
-							\item 4 tracks - what tracks are most important
-							\item	problem tracks do not reflect real needs for source separation
-					\end{itemize}
-		\end{itemize}
+    \vspace{-5mm}
+    \begin{columns}
+    \column{.8\linewidth}
+    \begin{itemize}
+        \item	MUSDB dataset for source separation
+            \begin{itemize}
+                \item   150 songs
+                \item   4 stems: vocals, drums, bass, other
+            \end{itemize}
+        \bigskip
+        \item<2->	problems
+            \begin{itemize}
+                \item   stem selection does not reflect many real world scenarios
+                \item   dataset size cannot reflect a diverse set of popular music
+            \end{itemize}
+        \bigskip
+        \item<3->[$\Rightarrow$] \textbf{mismatch between dataset and 'real' task}
+    \end{itemize}
+    \column{.2\linewidth}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{data challenge revisited}{dataset examples: summary}
